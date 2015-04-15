@@ -136,5 +136,8 @@ by Prelude.")
 (add-hook 'clojure-mode-hook 'paredit-mode)
 ;;(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+;;boot
+(add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+
 
 ;;; init.el ends here
