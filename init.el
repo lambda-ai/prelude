@@ -139,4 +139,10 @@ by Prelude.")
 ;;(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
+(setq auto-mode-alist
+      (append
+       ;; File name (within directory) starts with a dot.
+       '(("\\.cljc\\'" . clojure-mode))
+       auto-mode-alist))
+
 ;;; init.el ends here
