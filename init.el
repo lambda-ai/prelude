@@ -142,4 +142,10 @@ by Prelude.")
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
 
+(setq auto-mode-alist
+      (append
+       ;; File name (within directory) starts with a dot.
+       '(("\\.cljc\\'" . clojure-mode))
+       auto-mode-alist))
+
 ;;; init.el ends here
