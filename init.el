@@ -1,6 +1,6 @@
 ;;; init.el --- Prelude's configuration entry point.
 ;;
-;; Copyright (c) 2011 Bozhidar Batsov
+;; Copyright (c) 2011-2016 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://batsov.com/prelude
@@ -138,6 +138,9 @@ by Prelude.")
 (add-hook 'clojure-mode-hook 'paredit-mode)
 ;;(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+;;boot
+(add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+
 
 (setq auto-mode-alist
       (append
