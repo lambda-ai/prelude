@@ -32,6 +32,13 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (defvar current-user
       (getenv
        (if (equal system-type 'windows-nt) "USERNAME" "USER")))
@@ -142,10 +149,10 @@ by Prelude.")
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
 
-(setq auto-mode-alist
-      (append
-       ;; File name (within directory) starts with a dot.
-       '(("\\.cljc\\'" . clojure-mode))
-       auto-mode-alist))
+;; (setq auto-mode-alist
+;;       (append
+;;        ;; File name (within directory) starts with a dot.
+;;        '(("\\.cljc\\'" . clojure-mode))
+;;        auto-mode-alist))
 
 ;;; init.el ends here
