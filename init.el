@@ -155,8 +155,11 @@ by Prelude.")
 ;;        '(("\\.cljc\\'" . clojure-mode))
 ;;        auto-mode-alist))
 
+(setq prelude-guru nil)
+
 ;;; init.el ends here
 (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
 
 (when (executable-find "ipython")
-  (setq python-shell-interpreter "ipython"))
+  (setq python-shell-interpreter "ipython"
+        python-shell-interpreter-args "--simple-prompt -i"))
